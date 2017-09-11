@@ -1,0 +1,522 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>K-means · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-latex-codecogs/latex-codecogs.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="gmm.html" />
+    
+    
+    <link rel="prev" href="aprendizaje-no-supervisado.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../aprendizaje-de-maquina.html">
+            
+                <a href="../aprendizaje-de-maquina.html">
+            
+                    
+                    Aprendizaje de máquina
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../preprocesamiento/preprocesamiento.html">
+            
+                <a href="../preprocesamiento/preprocesamiento.html">
+            
+                    
+                    Preprocesamiento
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../preprocesamiento/binarizacion.html">
+            
+                <a href="../preprocesamiento/binarizacion.html">
+            
+                    
+                    Binarización
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../preprocesamiento/remocion.html">
+            
+                <a href="../preprocesamiento/remocion.html">
+            
+                    
+                    Remoción de la media
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../preprocesamiento/escalamiento.html">
+            
+                <a href="../preprocesamiento/escalamiento.html">
+            
+                    
+                    Escalamiento
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../preprocesamiento/normalizacion/normalizacion.html">
+            
+                <a href="../preprocesamiento/normalizacion/normalizacion.html">
+            
+                    
+                    Normalización
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.4.1" data-path="../preprocesamiento/normalizacion/normalizacion-l1.html">
+            
+                <a href="../preprocesamiento/normalizacion/normalizacion-l1.html">
+            
+                    
+                    Normalización L1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.2" data-path="../preprocesamiento/normalizacion/normalizacion-l2.html">
+            
+                <a href="../preprocesamiento/normalizacion/normalizacion-l2.html">
+            
+                    
+                    Normalización L2
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../aprendizaje-supervisado/aprendizaje-supervisado.html">
+            
+                <a href="../aprendizaje-supervisado/aprendizaje-supervisado.html">
+            
+                    
+                    Aprendizaje Supervisado
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../aprendizaje-supervisado/clasificador/regresion-logistica.html">
+            
+                <a href="../aprendizaje-supervisado/clasificador/regresion-logistica.html">
+            
+                    
+                    Regresión Logística
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../aprendizaje-supervisado/clasificador/bayes.html">
+            
+                <a href="../aprendizaje-supervisado/clasificador/bayes.html">
+            
+                    
+                    Bayes
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="aprendizaje-no-supervisado.html">
+            
+                <a href="aprendizaje-no-supervisado.html">
+            
+                    
+                    Aprendizaje No Supervisado
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.5.1" data-path="k-means.html">
+            
+                <a href="k-means.html">
+            
+                    
+                    K-means
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="gmm.html">
+            
+                <a href="gmm.html">
+            
+                    
+                    GMM
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../codificacion-etiquetas.html">
+            
+                <a href="../codificacion-etiquetas.html">
+            
+                    
+                    Codificación de etiquetas
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >K-means</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h3 id="k-means">K-means</h3>
+<p>K grupo, cada k grupo tiene un centroide(el elememnto para separarlos, para definirme el patr&#xF3;n de cada grupo).
+Luego toma la distancia de los datos al centroide, asignadole el grupo al que tenga la distancia mas cortica.</p>
+<p>cuando el centroide se deje de mover para el algoritmos.
+Cada que pasa una interaci&#xF3;n el centroide se reubica</p>
+<p>K means +++: Ubicar los centroides m&#xE1;s lejos posibles, para que converja m&#xE1;s r&#xE1;pido</p>
+<p>X: Variables latentes (est&#xE1;n ocultas)</p>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> numpy <span class="hljs-keyword">as</span> np
+<span class="hljs-keyword">import</span> matplotlib.pyplot <span class="hljs-keyword">as</span> plt
+<span class="hljs-keyword">from</span> sklearn.cluster <span class="hljs-keyword">import</span> KMeans
+<span class="hljs-keyword">from</span> sklearn <span class="hljs-keyword">import</span> cluster
+
+X = np.loadtxt(<span class="hljs-string">&quot;data_clustering.txt&quot;</span>, delimiter = <span class="hljs-string">&apos;,&apos;</span>)
+x_vals, y_vals = X[:,<span class="hljs-number">0</span>], X[:,<span class="hljs-number">1</span>]
+
+<span class="hljs-comment"># Visualizamos los datos para observar la disperci&#xF3;n</span>
+plt.figure()
+plt.scatter(x_vals, y_vals , marker = <span class="hljs-string">&apos;o&apos;</span>, s=<span class="hljs-number">80</span>, edgecolors=<span class="hljs-string">&apos;black&apos;</span>, facecolors = <span class="hljs-string">&apos;none&apos;</span> ,linewidth=<span class="hljs-number">1</span>)
+x_min, x_max = x_vals.min() - <span class="hljs-number">1</span> , x_vals.max() + <span class="hljs-number">1</span>
+y_min, y_max = y_vals.min() - <span class="hljs-number">1</span>, y_vals.max() + <span class="hljs-number">1</span>
+plt.title(<span class="hljs-string">&apos;Datos de entrada&apos;</span>)
+plt.xlim(x_min,x_max )
+plt.ylim(y_min,y_max )
+plt.xticks(())
+plt.yticks(())
+plt.show()
+
+
+num_cluster = <span class="hljs-number">5</span>
+
+modelo_kmeans = KMeans(init = <span class="hljs-string">&apos;k-means++&apos;</span>, n_clusters = num_cluster, n_init = <span class="hljs-number">10</span>) <span class="hljs-comment"># init establece el m&#xE9;todo de localizaci&#xF3;n inicial de los centroides</span>
+modelo_kmeans.fit(X)
+</code></pre>
+<pre><code class="lang-python">
+<span class="hljs-comment"># Visualizamos el resultado</span>
+
+paso = <span class="hljs-number">0.01</span>
+
+<span class="hljs-comment"># Puntos extremos de la malla</span>
+x_min, x_max = X[:,<span class="hljs-number">0</span>].min() - <span class="hljs-number">1</span> , X[:,<span class="hljs-number">0</span>].max() + <span class="hljs-number">1</span>
+y_min, y_max = X[:,<span class="hljs-number">1</span>].min() - <span class="hljs-number">1</span>, X[:,<span class="hljs-number">1</span>].max() + <span class="hljs-number">1</span>
+
+<span class="hljs-comment"># Asignamos los valores a la malla</span>
+x_vals, y_vals = np.meshgrid(np.arange(x_min, x_max, paso), np.arange(y_min, y_max, paso))
+
+salida = modelo_kmeans.predict(np.c_[x_vals.ravel(), y_vals.ravel()])
+salida = salida.reshape(x_vals.shape)
+
+plt.figure()
+plt.clf()
+plt.imshow(salida, interpolation=<span class="hljs-string">&apos;nearest&apos;</span>, extent = (x_vals.min(), x_vals.max(), y_vals.min(), y_vals.max()), cmap=plt.cm.Set2, aspect = <span class="hljs-string">&apos;auto&apos;</span>, origin=<span class="hljs-string">&apos;lower&apos;</span>)
+
+
+plt.scatter(X[:,<span class="hljs-number">0</span>], X[:,<span class="hljs-number">1</span>], marker = <span class="hljs-string">&apos;o&apos;</span>, facecolor=<span class="hljs-string">&apos;none&apos;</span>, edgecolors=<span class="hljs-string">&apos;black&apos;</span>, s=<span class="hljs-number">80</span>)
+
+centroides = modelo_kmeans.cluster_centers_
+
+plt.scatter(centroides[:,<span class="hljs-number">0</span>], centroides[:,<span class="hljs-number">1</span>], marker=<span class="hljs-string">&apos;*&apos;</span>, s = <span class="hljs-number">210</span>, linewidths= <span class="hljs-number">4</span>, facecolors = <span class="hljs-string">&apos;pink&apos;</span>)
+
+plt.title(<span class="hljs-string">&apos;Limites de los grupos&apos;</span>)
+plt.xlim(x_min,x_max )
+plt.ylim(y_min,y_max )
+plt.xticks(())
+plt.yticks(())
+plt.show()
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="aprendizaje-no-supervisado.html" class="navigation navigation-prev " aria-label="Previous page: Aprendizaje No Supervisado">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="gmm.html" class="navigation navigation-next " aria-label="Next page: GMM">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"K-means","level":"1.5.1","depth":2,"next":{"title":"GMM","level":"1.5.2","depth":2,"path":"aprendizaje-no-supervisado/gmm.md","ref":"aprendizaje-no-supervisado/gmm.md","articles":[]},"previous":{"title":"Aprendizaje No Supervisado","level":"1.5","depth":1,"path":"aprendizaje-no-supervisado/aprendizaje-no-supervisado.md","ref":"aprendizaje-no-supervisado/aprendizaje-no-supervisado.md","articles":[{"title":"K-means","level":"1.5.1","depth":2,"path":"aprendizaje-no-supervisado/k-means.md","ref":"aprendizaje-no-supervisado/k-means.md","articles":[]},{"title":"GMM","level":"1.5.2","depth":2,"path":"aprendizaje-no-supervisado/gmm.md","ref":"aprendizaje-no-supervisado/gmm.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["latex-codecogs","livereload"],"pluginsConfig":{"latex-codecogs":{"type":"gif"},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"aprendizaje-no-supervisado/k-means.md","mtime":"2017-09-11T17:18:18.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-09-11T15:53:49.706Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

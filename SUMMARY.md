@@ -1,0 +1,17 @@
+# Summary
+
+* [Aprendizaje de máquina](aprendizaje-de-maquina.md)
+* [Preprocesamiento](preprocesamiento/preprocesamiento.md)
+  * [Binarización](preprocesamiento/binarizacion.md)
+  * [Remoción de la media](preprocesamiento/remocion.md)
+  * [Escalamiento](preprocesamiento/escalamiento.md)
+  * [Normalización](preprocesamiento/normalizacion/normalizacion.md)
+    * [Normalización L1](preprocesamiento/normalizacion/normalizacion-l1.md)
+    * [Normalización L2](preprocesamiento/normalizacion/normalizacion-l2.md)
+* [Aprendizaje Supervisado](aprendizaje-supervisado/aprendizaje-supervisado.md)
+  * [Regresión Logística](aprendizaje-supervisado/clasificador/regresion-logistica.md)
+  * [Bayes](aprendizaje-supervisado/clasificador/bayes.md)
+* [Aprendizaje No Supervisado](aprendizaje-no-supervisado/aprendizaje-no-supervisado.md)
+  * [K-means](aprendizaje-no-supervisado/k-means.md)
+  * [GMM](aprendizaje-no-supervisado/gmm.md)
+* [Codificación de etiquetas](codificacion-etiquetas.md)

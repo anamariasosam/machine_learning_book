@@ -1,0 +1,536 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Bayes · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-latex-codecogs/latex-codecogs.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../../aprendizaje-no-supervisado/aprendizaje-no-supervisado.html" />
+    
+    
+    <link rel="prev" href="regresion-logistica.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../aprendizaje-de-maquina.html">
+            
+                <a href="../../aprendizaje-de-maquina.html">
+            
+                    
+                    Aprendizaje de máquina
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../preprocesamiento/preprocesamiento.html">
+            
+                <a href="../../preprocesamiento/preprocesamiento.html">
+            
+                    
+                    Preprocesamiento
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../../preprocesamiento/binarizacion.html">
+            
+                <a href="../../preprocesamiento/binarizacion.html">
+            
+                    
+                    Binarización
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../../preprocesamiento/remocion.html">
+            
+                <a href="../../preprocesamiento/remocion.html">
+            
+                    
+                    Remoción de la media
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../../preprocesamiento/escalamiento.html">
+            
+                <a href="../../preprocesamiento/escalamiento.html">
+            
+                    
+                    Escalamiento
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../../preprocesamiento/normalizacion/normalizacion.html">
+            
+                <a href="../../preprocesamiento/normalizacion/normalizacion.html">
+            
+                    
+                    Normalización
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.4.1" data-path="../../preprocesamiento/normalizacion/normalizacion-l1.html">
+            
+                <a href="../../preprocesamiento/normalizacion/normalizacion-l1.html">
+            
+                    
+                    Normalización L1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.2" data-path="../../preprocesamiento/normalizacion/normalizacion-l2.html">
+            
+                <a href="../../preprocesamiento/normalizacion/normalizacion-l2.html">
+            
+                    
+                    Normalización L2
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../aprendizaje-supervisado.html">
+            
+                <a href="../aprendizaje-supervisado.html">
+            
+                    
+                    Aprendizaje Supervisado
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="regresion-logistica.html">
+            
+                <a href="regresion-logistica.html">
+            
+                    
+                    Regresión Logística
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.2" data-path="bayes.html">
+            
+                <a href="bayes.html">
+            
+                    
+                    Bayes
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../../aprendizaje-no-supervisado/aprendizaje-no-supervisado.html">
+            
+                <a href="../../aprendizaje-no-supervisado/aprendizaje-no-supervisado.html">
+            
+                    
+                    Aprendizaje No Supervisado
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../../aprendizaje-no-supervisado/k-means.html">
+            
+                <a href="../../aprendizaje-no-supervisado/k-means.html">
+            
+                    
+                    K-means
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../../aprendizaje-no-supervisado/gmm.html">
+            
+                <a href="../../aprendizaje-no-supervisado/gmm.html">
+            
+                    
+                    GMM
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../../codificacion-etiquetas.html">
+            
+                <a href="../../codificacion-etiquetas.html">
+            
+                    
+                    Codificación de etiquetas
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >Bayes</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="clasificador-de-bayes-ingenuo">Clasificador de Bayes &quot;ingenuo&quot;</h1>
+<p>Simple, asume que las caracter&#xED;sticas son linealmente independiente y que son identicamente distribuidos.</p>
+<p>ingenuo porque asume con su caracter&#xED;sticas indpendientes!!</p>
+<p>Las caracter&#xED;sticas son i.i.d (independientes e id&#xE9;nticamente distribuidas), generalmente con funci&#xF3;n de densidad de probabilidad Normal o Gaussiana. La idea de este clasificador es maximizar la probabilidad posterior, de tal forma que:</p>
+<p><img src="https://latex.codecogs.com/gif.latex?\omega_(predict) = \arg\max_{j=1, \ldots, m}P(\omega_j|\mathbf{x}_i)," class="latex-codecogs mode-inline"></p>
+<p>Donde <img src="https://latex.codecogs.com/gif.latex?P(\omega_j|\mathbf{x}_i)" class="latex-codecogs mode-inline"> es la probabilidad posterior, esto es, la probabilidad de encontrar una etiqueta de clase <img src="https://latex.codecogs.com/gif.latex?\omega_j" class="latex-codecogs mode-inline"> dado un conjunto de patrones <img src="https://latex.codecogs.com/gif.latex?\mathbf{x}_i" class="latex-codecogs mode-inline"> y <img src="https://latex.codecogs.com/gif.latex?\omega_(predict)" class="latex-codecogs mode-inline"> es la etiqueta de clase determinada por el clasificador.</p>
+<p>La probabilidad posterior est&#xE1; dada por:</p>
+<p><img src="https://latex.codecogs.com/gif.latex?P(\omega_j|\mathbf{x}_i)=\frac{P(\mathbf{x}_i|\omega_j)P(\omega_j)}{P(\mathbf{x}_i)}," class="latex-codecogs mode-inline"></p>
+<p><img src="https://latex.codecogs.com/gif.latex?P(\mathbf{x}_i|\omega_j)=\prod_{k=1,\ldots,p}P(x_{ik}|\omega_j" class="latex-codecogs mode-inline"> la verosimilitud, <img src="https://latex.codecogs.com/gif.latex?P(\mathbf{x}_i)" class="latex-codecogs mode-inline">
+la evidencia y $$P(\omega_j)$4 la probabilidad prior o <em>a priori</em></p>
+<p>Se aplica a:</p>
+<ul>
+<li>Filtrado de correo (SPAM)</li>
+<li>Clasificaci&#xF3;n de secuencias RNA (&#xE1;cido ribonucleico)</li>
+<li>Diagnostico</li>
+</ul>
+<p>Pposterior = (Pcondicional* Pprior)/Evidencia</p>
+<p>P(Wj | Xi)</p>
+<p>Wj: Conjunto de etiquetas( W0, W1, Wm)
+Xi: Patrones o Caracter&#xED;sticas de la observaci&#xF3;n i=1..n
+P(Wj | Xi): Probabilidad de obtener la etiqueta de clase Wj dada un patr&#xF3;n Xi observado</p>
+<p><strong>Pcondicional</strong> - Verosimilitud
+Encontrar cierto patrones dada la clase a la que pertenece</p>
+<p>Probabilidad de que es de Antioquia dado unos rasgos</p>
+<p>P(Xi | Wj):</p>
+<p>Probabilidad de observar el conjunto de caracter&#xED;sticas Xi dado que se encuentren en la clase Wj</p>
+<p><strong>Pprior</strong> - Probabilidad de las clases en general, de las etiquetas(W) - Con conocimiento previo</p>
+<p>Probabilidad de que sea de Antioquia dada toda la poblaci&#xF3;n colombiana</p>
+<p><strong>Evidencia</strong> - Probabilidad de enontrar un patr&#xF3;n determinado dentro de toda la poblaci&#xF3;n sin importar la clase</p>
+<h2 id="pasos">Pasos</h2>
+<ol>
+<li>Encontrar la probabilidad condicional - verosimilitud</li>
+<li>Prior</li>
+<li>Establecer la regla con la Probabilidad Posteriori</li>
+</ol>
+<pre><code class="lang-python"><span class="hljs-comment"># importamos las librer&#xED;as necesarias</span>
+<span class="hljs-keyword">import</span> numpy <span class="hljs-keyword">as</span> np
+<span class="hljs-keyword">import</span> matplotlib.pyplot <span class="hljs-keyword">as</span> plt
+<span class="hljs-keyword">from</span> sklearn.naive_bayes <span class="hljs-keyword">import</span> GaussianNB
+<span class="hljs-keyword">from</span> sklearn <span class="hljs-keyword">import</span> cross_validation
+<span class="hljs-keyword">from</span> sklearn <span class="hljs-keyword">import</span> datasets
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">graficar_clasificador</span><span class="hljs-params">(clasificador, X, y)</span>:</span>
+    <span class="hljs-comment"># definimos valores m&#xE1;ximos y m&#xED;nimos de la malla que vamos a graficar</span>
+    min_x, max_x = X[:,<span class="hljs-number">0</span>].min() - <span class="hljs-number">1.0</span> , X[:,<span class="hljs-number">0</span>].max() + <span class="hljs-number">1.0</span>
+    min_y, max_y = X[:,<span class="hljs-number">1</span>].min() - <span class="hljs-number">1.0</span> , X[:,<span class="hljs-number">1</span>].max() + <span class="hljs-number">1.0</span>
+
+    paso = <span class="hljs-number">0.01</span>
+
+    x_vals, y_vals = np.mgrid[min_x:max_x:paso, min_y:max_y:paso]
+
+    <span class="hljs-comment"># corremos el clasificador sobre la malla</span>
+    resultados = clasificador.predict(np.c_[x_vals.ravel(), y_vals.ravel()])
+
+    resultados = resultados.reshape(x_vals.shape)
+
+
+    plt.figure()
+    plt.pcolormesh(x_vals, y_vals, resultados, cmap=plt.cm.Pastel1)
+    plt.scatter(X[:,<span class="hljs-number">0</span>], X[:,<span class="hljs-number">1</span>],c=y, s=<span class="hljs-number">75</span>, edgecolors=<span class="hljs-string">&apos;black&apos;</span>, linewidth=<span class="hljs-number">1</span>, cmap=plt.cm.Set2 )
+    plt.xlim(x_vals.min(), x_vals.max())
+    plt.ylim(y_vals.min(), y_vals.max())
+    plt.show()
+
+iris = datasets.load_iris()
+X = iris.data[:,[<span class="hljs-number">1</span>,<span class="hljs-number">3</span>]]
+y = iris.target
+
+X_train, X_test, y_train, y_test = cross_validation.train_test_split(X,y, test_size=<span class="hljs-number">0.2</span>, random_state=<span class="hljs-number">3</span>)
+
+clasificador = GaussianNB()
+clasificador.fit(X_train, y_train)
+
+y_predict = clasificador.predict(X_test)
+
+acc = <span class="hljs-number">100.0</span>*(y_predict == y_test).sum()/X_test.shape[<span class="hljs-number">0</span>]
+print(<span class="hljs-string">&apos;El acc de clasificacion es del &apos;</span>, acc, <span class="hljs-string">&apos;%&apos;</span>)
+
+graficar_clasificador(clasificador, X_test, y_test)
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="regresion-logistica.html" class="navigation navigation-prev " aria-label="Previous page: Regresión Logística">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../../aprendizaje-no-supervisado/aprendizaje-no-supervisado.html" class="navigation navigation-next " aria-label="Next page: Aprendizaje No Supervisado">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Bayes","level":"1.4.2","depth":2,"next":{"title":"Aprendizaje No Supervisado","level":"1.5","depth":1,"path":"aprendizaje-no-supervisado/aprendizaje-no-supervisado.md","ref":"aprendizaje-no-supervisado/aprendizaje-no-supervisado.md","articles":[{"title":"K-means","level":"1.5.1","depth":2,"path":"aprendizaje-no-supervisado/k-means.md","ref":"aprendizaje-no-supervisado/k-means.md","articles":[]},{"title":"GMM","level":"1.5.2","depth":2,"path":"aprendizaje-no-supervisado/gmm.md","ref":"aprendizaje-no-supervisado/gmm.md","articles":[]}]},"previous":{"title":"Regresión Logística","level":"1.4.1","depth":2,"path":"aprendizaje-supervisado/clasificador/regresion-logistica.md","ref":"aprendizaje-supervisado/clasificador/regresion-logistica.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["latex-codecogs","livereload"],"pluginsConfig":{"latex-codecogs":{"type":"gif"},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"aprendizaje-supervisado/clasificador/bayes.md","mtime":"2017-09-11T17:05:30.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-09-11T15:53:49.706Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
